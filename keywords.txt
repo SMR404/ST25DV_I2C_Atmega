@@ -1,0 +1,6 @@
+ST25DV_I2C_Atmega	KEYWORD1
+ST25DV_register_write	KEYWORD2
+ST25DV_register_read	KEYWORD2
+ST25DV_enableFTM	KEYWORD2
+ST25DV_presentPassword	KEYWORD2
+ST25DV_firstTimeSetup	KEYWORD2
