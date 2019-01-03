@@ -11,10 +11,11 @@ ST25DV_I2C_Atmega::ST25DV_I2C_Atmega()
 } 
 
 
+
 /*
     @description  Write the contents of 1 or more registers (registers may be in memory areas of dynamic, FTM mailbox, user, or system)
-    @paramater    dataBytes : pointer of the array from which the contents to be written is copied from (make sure it can accomodate numberOfBytes)
-    @paramater    memAddress : 16 bit address of 1st register to write to (subsequent register addresses are auto-incremented)
+    @parameter    dataBytes : pointer of the array from which the contents to be written is copied from (make sure it can accomodate numberOfBytes)
+    @parameter    memAddress : 16 bit address of 1st register to write to (subsequent register addresses are auto-incremented)
     @parameter    numberOfBytes : how many bytes (registers) to be written
     @parameter    registerType : specifies the type of register being operated on (range of values: 0-2). Value of 0: dynamic or FTM mailbox registers.
                                  Value of 1: User memory registers. Value of 2: System memory registers. Values outside 0-2 do nothing.
@@ -64,8 +65,8 @@ int ST25DV_I2C_Atmega::ST25DV_register_write(uint8_t * dataBytes, uint16_t memAd
 
 /*
     @description  Read the contents of 1 or more registers (registers may be in memory areas of dynamic, FTM mailbox, user, or system)
-    @paramater    dataBytes : pointer of the array from which the contents to be read is copied from (make sure it can accomodate numberOfBytes)
-    @paramater    memAddress : 16 bit address of 1st register to read from (subsequent register addresses are auto-incremented)
+    @parameter    dataBytes : pointer of the array from which the contents to be read is copied from (make sure it can accomodate numberOfBytes)
+    @parameter    memAddress : 16 bit address of 1st register to read from (subsequent register addresses are auto-incremented)
     @parameter    numberOfBytes : how many bytes (registers) to be read
     @parameter    registerType : specifies the type of register being operated on (range of values: 0-2). Value of 0: dynamic or FTM mailbox registers.
                                  Value of 1: User memory registers. Value of 2: System memory registers. Values outside 0-2 do nothing.
@@ -152,7 +153,7 @@ int ST25DV_I2C_Atmega::ST25DV_enableFTM()
 
 /*
     @description  Present the I2C password to attempt to open an I2C security session. Does not indicate if security session was successfully opened.
-    @paramater    password_64bits : the 64 bit I2C password
+    @parameter    password_64bits : the 64 bit I2C password
 
 */
 int ST25DV_I2C_Atmega::ST25DV_presentPassword(uint8_t * password_64bits)
@@ -168,6 +169,10 @@ int ST25DV_I2C_Atmega::ST25DV_presentPassword(uint8_t * password_64bits)
 
   return wireStatus; //any TWI error handling is to be done outside this function
 }
+
+
+
+
 
 
 /*
